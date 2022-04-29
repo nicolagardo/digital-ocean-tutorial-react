@@ -2,7 +2,7 @@ import './App.css';
 
 function App() {
   const greeting = "greeting";
-  const clickeame = () =>{}
+  const displayEmojiName = ev => alert(ev.target.id);
   return (
     <>
       <div className="container">
@@ -10,17 +10,17 @@ function App() {
         <p>I am writing JSX</p>
         <ul>
           <li>
-            <button onClick={event => alert(event.target.id)}>
+            <button onClick={displayEmojiName}>
               <span role="img" aria-label="grinning face" id="grinning face">😀</span>
             </button>
             </li>
           <li>
-            <button onClick={event => alert(event.target.id)}>
+            <button onClick={displayEmojiName}>
                 <span role="img" aria-label="party popper" id="party popper">🎉</span>
             </button>
           </li>
           <li>
-            <button onMouseOverCapture={ev => console.log(ev.target.id)}>
+            <button onClick={displayEmojiName}>
                 <span role="img" aria-label="woman dancing" id="woman dancing">💃</span>
             </button>
           </li>
